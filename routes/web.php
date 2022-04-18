@@ -30,4 +30,6 @@ Route::get('/posts/{post}', 'PostController@show');
 Route::post('/posts', 'PostController@store');
 
 
+Route::get('/categories/{category}', 'CategoryController@index');
+
 
