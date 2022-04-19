@@ -7,6 +7,9 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
     <body>
+        @extends('layouts.app')
+        @section('content')
+        {{Auth::user()->name}}
         <h1>Blog Name</h1>
         <p class='create'>[<a href='/posts/create'>create</a>]</p>
             @foreach ($posts as $post)
@@ -29,5 +32,6 @@
             {{ $posts->links() }}
         </div>
         <script src="{{asset("/js/blog.js")}}"></script>
+         @endsection
     </body>
 </html>

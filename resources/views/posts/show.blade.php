@@ -9,10 +9,12 @@
         <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>
+        @extends('layouts.app')
+        @section('content')
+        <p class="edit">[<a href="/posts/{{ $post->id }}/edit">edit</a>]</p>
         <h1 class="title">
             {{ $post->title }}
         </h1>
-        <p class="edit">[<a href="/posts/{{ $post->id }}/edit">edit</a>]</p>
         <div class="content">
             <div class="content__post">
                 <h3>本文</h3>
@@ -23,5 +25,6 @@
         <div class="footer">
             <a href="/">戻る</a>
         </div>
+         @endsection
     </body>
 </html>
